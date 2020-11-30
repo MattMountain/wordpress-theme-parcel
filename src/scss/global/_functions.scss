@@ -1,0 +1,4 @@
+@function getcol($col) {
+    $result: calc((100% / 12) * #{$col} - 30px);
+    @return $result;
+}

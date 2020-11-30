@@ -1,0 +1,74 @@
+.services {
+    @extend%spacer !optional;
+    &--title {
+        @extend%headline !optional;
+    }
+    &--list {
+        list-style: none;
+        display: flex;
+        padding-left: 0;
+        flex-direction: column;
+        justify-content: center;
+        @include breakpoint-up-md {
+            justify-content: space-between;
+            flex-direction: row;    
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            border-radius: 5px;
+            margin: 0 auto 40px auto;
+            width: 100%;
+            cursor: pointer;
+            @include breakpoint-up-sm {
+                width: getcol(6);
+            }
+            @include breakpoint-up-md {
+                width: getcol(4);
+                margin: unset;
+            }
+            &:first-of-type {
+                background-color: $secondary-color;
+                &:hover {
+                    background-color: darken(#FFFCDB, 20%);
+                }
+            }
+            &:nth-child(2) {
+                background-color: $blue;
+                &:hover {
+                    background-color: darken(#00AEEF, 30%);
+                }
+            }
+            &:last-of-type {
+                background-color: $third-color;
+                margin-bottom: 0;
+                &:hover {
+                    background-color: darken(#E3EDD8, 30%);
+                }
+            }
+            &--headline {
+                font-size: rem(#{$font-size-h3});
+                text-align: center;
+                color: $primary-color;
+                font-weight: 200;
+                margin: 20px auto;
+            }
+            &--svg {
+                width: 90%;
+                overflow: hidden;
+                margin: 0px auto 20px auto;
+                max-height: rem(200px);
+                height: rem(200px);
+                @include breakpoint-up-md {
+                    max-height: rem(250px);
+                    height: rem(250px);
+                }
+                &__img {
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.news {
+    @extend%spacer !optional;
+    &--title {
+        @extend%headline !optional;
+    }
+    &--content {
+        background-color: #F6E1D8;
+        padding: 10px;
+        border-radius: 5px;
+        &__item {
+            font-size: rem(#{$font-size-p});
+            margin: 7.5px auto;
+            em, a {
+                font-size: rem(#{$font-size-p});
+                color: $primary-color;
+            }
+            a {
+                text-decoration: unset;
+                &:hover {
+                    color: darken(#00AEEF, 20%);
+                }
+            }
+        }
+    }
+}

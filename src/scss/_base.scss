@@ -1,0 +1,19 @@
+// import fonts
+@import "./fonts/fonts";
+
+// import libaries
+@import "../../node_modules/sass-rem/rem";
+
+// import global settings
+@import "./global/mixin";
+@import "./global/variables";
+@import "./global/global";
+@import "./global/functions";
+
+// import elements
+@import "./elements/navigation";
+@import "./elements/hero";
+@import "./elements/services";
+@import "./elements/news";
+@import "./elements/reference";
+@import "./elements/footer";

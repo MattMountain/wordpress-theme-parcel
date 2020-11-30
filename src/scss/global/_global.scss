@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Slabo 13px', serif;
+}
+p, a {
+    font-size: $font-size-p;
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    width: calc(100% - 30px);
+    @include breakpoint-up-sm {
+        max-width: 540px;
+    }
+    @include breakpoint-up-md {
+        max-width: 720px;
+    }
+    @include breakpoint-up-lg {
+        max-width: 960px;
+    }
+    @include breakpoint-up-xl {
+        max-width: 1140px;
+    }
+}
+%show {
+    display: block;
+    visibility: visible;
+}
+%hidden {
+    display: none;
+    visibility: hidden;
+}
+%headline {
+    font-size: rem(#{$font-size-h2});
+    color: $primary-color;
+    font-weight: 300;
+}
+
+%spacer {
+    margin: 50px auto;
+}
+
+%btn, .btn {
+    width: max-content;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: $green;
+    border: unset;
+    position: relative;
+    &--link, a {
+        text-decoration: none;
+        color: white;
+        position: relative;
+        z-index: 2;
+        @include breakpoint-up-sm {
+            font-size: 1rem;
+        }
+        @include breakpoint-up-md {
+            font-size: 1.33rem;
+        }
+        @include breakpoint-up-lg {
+          font-size: 1.66rem;
+        }
+        @include breakpoint-up-xl {
+          font-size: rem(27px);
+        }
+    }
+    &:hover {
+        background-color: #357835;
+    }
+}
